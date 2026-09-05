@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Dashboard administrativo para gestión de inventario">
+    <title>Dashboard | Gestión de Inventario</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="dashboard">
+
+        <!-- ================= SIDEBAR ================= -->
+        <aside class="sidebar" id="sidebar">
+
+            <div class="logo">
+                <div class="logo-icon">I</div>
+                <span class="logo-text">Inventario</span>
+            </div>
+
+            <nav class="navigation" aria-label="Navegación principal">
+
+                <p class="menu-title">MENÚ PRINCIPAL</p>
+
+                <a href="#" class="nav-link active" aria-current="page">
+                    <span class="nav-icon" aria-hidden="true">▦</span>
+                    <span>Dashboard</span>
+                </a>
+
+                <a href="#" class="nav-link">
+                    <span class="nav-icon" aria-hidden="true">📦</span>
+                    <span>Productos</span>
+                </a>
+
+                <a href="#" class="nav-link">
+                    <span class="nav-icon" aria-hidden="true">🛒</span>
+                    <span>Ventas</span>
+                </a>
+
+                <a href="#" class="nav-link">
+                    <span class="nav-icon" aria-hidden="true">👥</span>
+                    <span>Clientes</span>
+                </a>
+
+                <a href="#" class="nav-link">
+                    <span class="nav-icon" aria-hidden="true">📊</span>
+                    <span>Reportes</span>
+                </a>
+
+                <p class="menu-title">CONFIGURACIÓN</p>
+
+                <a href="#" class="nav-link">
+                    <span class="nav-icon" aria-hidden="true">⚙</span>
+                    <span>Configuración</span>
+                </a>
+
+                <a href="#" class="nav-link">
+                    <span class="nav-icon" aria-hidden="true">❓</span>
+                    <span>Ayuda</span>
+                </a>
+
+            </nav>
+
+            <div class="sidebar-bottom">
+                <div class="user-mini">
+                    <div class="avatar">JD</div>
+
+                    <div class="user-info">
+                        <strong>Juan David</strong>
+                        <span>Administrador</span>
+                    </div>
+                </div>
+            </div>
+
+        </aside>
+
+
+        <!-- ================= HEADER ================= -->
+        <header class="header">
+
+            <div class="header-left">
+
+                <button
+                    class="menu-button"
+                    id="menuButton"
+                    type="button"
+                    aria-label="Abrir o cerrar menú"
+                    aria-controls="sidebar"
+                    aria-expanded="true">
+                    ☰
+                </button>
+
+                <div>
+                    <h1>Dashboard</h1>
+                    <p>Resumen general del inventario</p>
+                </div>
+
+            </div>
+
+            <div class="header-right">
+
+                <label class="search-box">
+                    <span aria-hidden="true">🔍</span>
+
+                    <input
+                        type="search"
+                        placeholder="Buscar..."
+                        aria-label="Buscar en el dashboard">
+                </label>
+
+                <button class="notification-button" type="button" aria-label="Ver notificaciones">
+                    🔔
+                    <span class="notification-dot"></span>
+                </button>
+
+                <div class="profile">
+                    <div class="avatar">JD</div>
+
+                    <div class="profile-info">
+                        <strong>Juan David</strong>
+                        <span>Administrador</span>
+                    </div>
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- ================= MAIN ================= -->
+        <main class="main" role="main">
+
+            <!-- TARJETAS DE RESUMEN -->
+            <section class="summary-section" aria-labelledby="summary-title">
+
+                <div class="section-heading">
+                    <div>
+                        <h2 id="summary-title">Resumen</h2>
+                        <p>Información actualizada de tu inventario.</p>
+                    </div>
+
+                    <button class="date-button" type="button">
+                        📅 Septiembre 2026
+                    </button>
+                </div>
+
+
+                <div class="summary-cards">
+
+                    <!-- TARJETA 1 -->
+                    <article class="summary-card">
+                        <div class="card-top">
+                            <div class="card-icon blue">
+                                📦
+                            </div>
+
+                            <span class="trend positive">
+                                +12.5%
+                            </span>
+                        </div>
+
+                        <div class="card-content">
+                            <p>Total de productos</p>
+                            <h3>1,248</h3>
+                            <span>+48 esta semana</span>
+                        </div>
+                    </article>
+
+
+                    <!-- TARJETA 2 -->
+                    <article class="summary-card">
+                        <div class="card-top">
+                            <div class="card-icon green">
+                                💰
+                            </div>
+
+                            <span class="trend positive">
+                                +8.2%
+                            </span>
+                        </div>
+
+                        <div class="card-content">
+                            <p>Ventas del mes</p>
+                            <h3>$24.580.000</h3>
+                            <span>+15% comparado al mes anterior</span>
+                        </div>
+                    </article>
+
+
+                    <!-- TARJETA 3 -->
+                    <article class="summary-card">
+                        <div class="card-top">
+                            <div class="card-icon orange">
+                                🛒
+                            </div>
+
+                            <span class="trend positive">
+                                +5.7%
+                            </span>
+                        </div>
+
+                        <div class="card-content">
+                            <p>Pedidos realizados</p>
+                            <h3>356</h3>
+                            <span>32 pedidos pendientes</span>
+                        </div>
+                    </article>
+
+
+                    <!-- TARJETA 4 -->
+                    <article class="summary-card">
+                        <div class="card-top">
+                            <div class="card-icon red">
+                                ⚠
+                            </div>
+
+                            <span class="trend negative">
+                                -3.1%
+                            </span>
+                        </div>
+
+                        <div class="card-content">
+                            <p>Stock bajo</p>
+                            <h3>18</h3>
+                            <span>Productos requieren atención</span>
+                        </div>
+                    </article>
+
+                </div>
+
+            </section>
+
+
+            <!-- ================= GRÁFICO ================= -->
+            <section class="content-grid">
+
+                <article class="panel chart-panel">
+
+                    <div class="panel-header">
+                        <div>
+                            <h2>Ventas mensuales</h2>
+                            <p>Comportamiento de las ventas durante el año.</p>
+                        </div>
+
+                        <select aria-label="Seleccionar periodo">
+                            <option>2026</option>
+                            <option>2025</option>
+                        </select>
+                    </div>
+
+                    <div class="chart">
+
+                        <div class="chart-y">
+                            <span>$30M</span>
+                            <span>$20M</span>
+                            <span>$10M</span>
+                            <span>$0</span>
+                        </div>
+
+                        <div class="chart-area">
+
+                            <div class="chart-lines">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+
+                            <div class="bars">
+
+                                <div class="bar-column">
+                                    <div class="bar" style="height: 45%;"></div>
+                                    <span>Ene</span>
+                                </div>
+
+                                <div class="bar-column">
+                                    <div class="bar" style="height: 58%;"></div>
+                                    <span>Feb</span>
+                                </div>
+
+                                <div class="bar-column">
+                                    <div class="bar" style="height: 50%;"></div>
+                                    <span>Mar</span>
+                                </div>
+
+                                <div class="bar-column">
+                                    <div class="bar" style="height: 67%;"></div>
+                                    <span>Abr</span>
+                                </div>
+
+                                <div class="bar-column">
+                                    <div class="bar" style="height: 62%;"></div>
+                                    <span>May</span>
+                                </div>
+
+                                <div class="bar-column">
+                                    <div class="bar" style="height: 78%;"></div>
+                                    <span>Jun</span>
+                                </div>
+
+                                <div class="bar-column">
+                                    <div class="bar" style="height: 72%;"></div>
+                                    <span>Jul</span>
+                                </div>
+
+                                <div class="bar-column">
+                                    <div class="bar" style="height: 86%;"></div>
+                                    <span>Ago</span>
+                                </div>
+
+                                <div class="bar-column">
+                                    <div class="bar current" style="height: 92%;"></div>
+                                    <span>Sep</span>
+                                </div>
+
+                                <div class="bar-column">
+                                    <div class="bar" style="height: 55%;"></div>
+                                    <span>Oct</span>
+                                </div>
+
+                                <div class="bar-column">
+                                    <div class="bar" style="height: 70%;"></div>
+                                    <span>Nov</span>
+                                </div>
+
+                                <div class="bar-column">
+                                    <div class="bar" style="height: 80%;"></div>
+                                    <span>Dic</span>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- ================= ESTADO INVENTARIO ================= -->
+                <article class="panel inventory-panel">
+
+                    <div class="panel-header">
+                        <div>
+                            <h2>Estado del inventario</h2>
+                            <p>Distribución actual.</p>
+                        </div>
+                    </div>
+
+                    <div class="inventory-status">
+
+                        <div class="status-circle">
+                            <div>
+                                <strong>82%</strong>
+                                <span>Disponible</span>
+                            </div>
+                        </div>
+
+                        <div class="status-list">
+
+                            <div class="status-item">
+                                <span class="status-label">
+                                    <i class="status-dot available"></i>
+                                    Disponible
+                                </span>
+
+                                <strong>1,024</strong>
+                            </div>
+
+                            <div class="status-item">
+                                <span class="status-label">
+                                    <i class="status-dot low"></i>
+                                    Stock bajo
+                                </span>
+
+                                <strong>148</strong>
+                            </div>
+
+                            <div class="status-item">
+                                <span class="status-label">
+                                    <i class="status-dot out"></i>
+                                    Agotado
+                                </span>
+
+                                <strong>76</strong>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+            </section>
+
+
+            <!-- ================= TABLA ================= -->
+            <section class="panel products-panel">
+
+                <div class="panel-header">
+
+                    <div>
+                        <h2>Productos recientes</h2>
+                        <p>Últimos productos registrados en el sistema.</p>
+                    </div>
+
+                    <button class="primary-button" type="button">
+                        + Agregar producto
+                    </button>
+
+                </div>
+
+
+                <div class="table-container">
+
+                    <table>
+
+                        <thead>
+                            <tr>
+                                <th>Producto</th>
+                                <th>Categoría</th>
+                                <th>Precio</th>
+                                <th>Stock</th>
+                                <th>Estado</th>
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+
+                            <tr>
+                                <td>
+                                    <div class="product-name">
+                                        <div class="product-image">L</div>
+                                        <div>
+                                            <strong>Laptop Lenovo</strong>
+                                            <span>SKU-00124</span>
+                                        </div>
+                                    </div>
+                                </td>
+
+                                <td>Computadores</td>
+
+                                <td>$2.450.000</td>
+
+                                <td>32 unidades</td>
+
+                                <td>
+                                    <span class="badge available-badge">
+                                        Disponible
+                                    </span>
+                                </td>
+
+                                <td>
+                                    <button class="action-button" type="button" aria-label="Más acciones">
+                                        ⋮
+                                    </button>
+                                </td>
+                            </tr>
+
+
+                            <tr>
+                                <td>
+                                    <div class="product-name">
+                                        <div class="product-image">M</div>
+                                        <div>
+                                            <strong>Mouse Logitech</strong>
+                                            <span>SKU-00231</span>
+                                        </div>
+                                    </div>
+                                </td>
+
+                                <td>Accesorios</td>
+
+                                <td>$85.000</td>
+
+                                <td>8 unidades</td>
+
+                                <td>
+                                    <span class="badge low-badge">
+                                        Stock bajo
+                                    </span>
+                                </td>
+
+                                <td>
+                                    <button class="action-button" type="button" aria-label="Más acciones">
+                                        ⋮
+                                    </button>
+                                </td>
+                            </tr>
+
+
+                            <tr>
+                                <td>
+                                    <div class="product-name">
+                                        <div class="product-image">T</div>
+                                        <div>
+                                            <strong>Teclado mecánico</strong>
+                                            <span>SKU-00342</span>
+                                        </div>
+                                    </div>
+                                </td>
+
+                                <td>Accesorios</td>
+
+                                <td>$230.000</td>
+
+                                <td>25 unidades</td>
+
+                                <td>
+                                    <span class="badge available-badge">
+                                        Disponible
+                                    </span>
+                                </td>
+
+                                <td>
+                                    <button class="action-button" type="button" aria-label="Más acciones">
+                                        ⋮
+                                    </button>
+                                </td>
+                            </tr>
+
+
+                            <tr>
+                                <td>
+                                    <div class="product-name">
+                                        <div class="product-image">M</div>
+                                        <div>
+                                            <strong>Monitor Samsung</strong>
+                                            <span>SKU-00451</span>
+                                        </div>
+                                    </div>
+                                </td>
+
+                                <td>Monitores</td>
+
+                                <td>$890.000</td>
+
+                                <td>0 unidades</td>
+
+                                <td>
+                                    <span class="badge out-badge">
+                                        Agotado
+                                    </span>
+                                </td>
+
+                                <td>
+                                    <button class="action-button" type="button" aria-label="Más acciones">
+                                        ⋮
+                                    </button>
+                                </td>
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </section>
+
+        </main>
+
+
+        <!-- ================= FOOTER ================= -->
+        <footer class="footer">
+
+            <p>
+                © 2026 Dashboard de Inventario. Todos los derechos reservados.
+            </p>
+
+            <div class="footer-links">
+                <a href="#">Privacidad</a>
+                <a href="#">Ayuda</a>
+                <a href="#">Contacto</a>
+            </div>
+
+        </footer>
+
+    </div>
+
+
+    <!-- ================= JAVASCRIPT ================= -->
+    <script>
+
+        const menuButton = document.getElementById("menuButton");
+        const sidebar = document.getElementById("sidebar");
+
+        menuButton.addEventListener("click", () => {
+
+            const collapsed = sidebar.classList.toggle("collapsed");
+
+            menuButton.setAttribute(
+                "aria-expanded",
+                !collapsed
+            );
+
+        });
+
+    </script>
+
+</body>
+</html>
